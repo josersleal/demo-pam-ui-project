@@ -8,10 +8,13 @@ public class Person implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "Id")
+	@org.kie.api.definition.type.Label("Id")
 	private java.lang.Long id;
+
+	@org.kie.api.definition.type.Label(value = "Address")
+	private com.poc.Address address;
 
 	public Person() {
 	}
@@ -32,15 +35,25 @@ public class Person implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Person(java.lang.String name, java.lang.Long id) {
-		this.name = name;
-		this.id = id;
-	}
-	
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", id=" + id + ", address=" + address + "]";
+		return "Person [name=" + name + ", id=" + id + ", address=" + address
+				+ "]";
 	}
-	
+
+	public com.poc.Address getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(com.poc.Address address) {
+		this.address = address;
+	}
+
+	public Person(java.lang.String name, java.lang.Long id,
+			com.poc.Address address) {
+		this.name = name;
+		this.id = id;
+		this.address = address;
+	}
 
 }

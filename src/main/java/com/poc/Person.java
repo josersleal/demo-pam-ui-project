@@ -36,5 +36,11 @@ public class Person implements java.io.Serializable {
 		this.name = name;
 		this.id = id;
 	}
+	
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", id=" + id + ", address=" + address + "]";
+	}
+	
 
 }

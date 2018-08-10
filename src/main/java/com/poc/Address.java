@@ -6,12 +6,76 @@ package com.poc;
 
 public class Address implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Address() {
-    }
+	@org.kie.api.definition.type.Label(value = "Address Line 1")
+	private java.lang.String addressLine1;
+	@org.kie.api.definition.type.Label(value = "Address Line 2")
+	private java.lang.String addressLine2;
+	@org.kie.api.definition.type.Label(value = "City")
+	private java.lang.String city;
+	@org.kie.api.definition.type.Label(value = "Country")
+	private java.lang.String country;
+	@org.kie.api.definition.type.Label(value = "Zip Code")
+	private int zip;
 
+	public Address() {
+	}
 
+	public java.lang.String getAddressLine1() {
+		return this.addressLine1;
+	}
 
+	public void setAddressLine1(java.lang.String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
 
+	public java.lang.String getAddressLine2() {
+		return this.addressLine2;
+	}
+
+	public void setAddressLine2(java.lang.String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
+
+	public java.lang.String getCity() {
+		return this.city;
+	}
+
+	public void setCity(java.lang.String city) {
+		this.city = city;
+	}
+
+	public java.lang.String getCountry() {
+		return this.country;
+	}
+
+	public void setCountry(java.lang.String country) {
+		this.country = country;
+	}
+
+	public int getZip() {
+		return this.zip;
+	}
+
+	public void setZip(int zip) {
+		this.zip = zip;
+	}
+
+	public Address(java.lang.String addressLine1,
+			java.lang.String addressLine2, java.lang.String city,
+			java.lang.String country, int zip) {
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.city = city;
+		this.country = country;
+		this.zip = zip;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", city=" + city + ", zip="
+				+ zip + ", country=" + country + "]";
+	}
+	
 }

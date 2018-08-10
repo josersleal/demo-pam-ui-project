@@ -7,29 +7,69 @@ package com;
 @javax.persistence.Entity
 public class Customer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "CUSTOMER_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "CUSTOMER_ID_GENERATOR", sequenceName = "CUSTOMER_ID_SEQ")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(generator = "CUSTOMER_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(name = "CUSTOMER_ID_GENERATOR", sequenceName = "CUSTOMER_ID_SEQ")
+	private java.lang.Long id;
 
-    public Customer() {
-    }
-    
-    public Customer(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "name")
+	private java.lang.String name;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Email")
+	private java.lang.String email;
 
+	@org.kie.api.definition.type.Label(value = "New Customer")
+	private java.lang.Boolean newCust;
 
+	public Customer() {
+	}
 
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public java.lang.Boolean getNewCust() {
+		return this.newCust;
+	}
+
+	public void setNewCust(java.lang.Boolean newCust) {
+		this.newCust = newCust;
+	}
+
+	public Customer(java.lang.Long id, java.lang.String name,
+			java.lang.String email, java.lang.Boolean newCust) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.newCust = newCust;
+	}
+	
+	@Override
+	public String toString() {
+		return "Customer [name=" + name + ", id=" + id + ", email=" + email + ", newCust=" + newCust + "]";
+	}
+	
 
 }

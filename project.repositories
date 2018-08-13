@@ -11,14 +11,6 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>redhat-techpreview-all-repository</id>
-        <url>http://maven.repository.redhat.com/techpreview/all/</url>
-        <source>SETTINGS</source>
-      </metadata>
-    </repository>
-    <repository>
-      <include>true</include>
-      <metadata>
         <id>jboss-ga-repository</id>
         <url>http://maven.repository.redhat.com/techpreview/all</url>
         <source>SETTINGS</source>
@@ -27,16 +19,24 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>central</id>
-        <url>http://repo1.maven.org/maven2</url>
+        <id>jboss-ga-plugin-repository</id>
+        <url>http://maven.repository.redhat.com/techpreview/all</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>jboss-ga-plugin-repository</id>
-        <url>http://maven.repository.redhat.com/techpreview/all</url>
+        <id>redhat-techpreview-all-repository</id>
+        <url>http://maven.repository.redhat.com/techpreview/all/</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>central</id>
+        <url>http://repo1.maven.org/maven2</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>

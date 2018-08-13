@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.poc</groupId>
   <artifactId>ENT_INT</artifactId>
-  <version>2.0.0</version>
+  <version>3.0.0</version>
   <packaging>kjar</packaging>
   <name>ENT_INT</name>
   <description></description>

@@ -6,12 +6,51 @@ package com;
 
 public class Emp implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Emp() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Id")
+	private int id;
+	@org.kie.api.definition.type.Label(value = "New Employee")
+	private java.lang.Boolean newEmp;
 
+	public Emp() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public java.lang.Boolean getNewEmp() {
+		return this.newEmp;
+	}
+
+	public void setNewEmp(java.lang.Boolean newEmp) {
+		this.newEmp = newEmp;
+	}
+
+	public Emp(java.lang.String name, int id, java.lang.Boolean newEmp) {
+		this.name = name;
+		this.id = id;
+		this.newEmp = newEmp;
+	}
+	
+	@Override
+	public String toString() {
+		return "Emp [name=" + name + ", id=" + id +  ", newEmp=" + newEmp + "]";
+	}
 
 }
